@@ -1,6 +1,9 @@
+src/main/java/solid/interfaces/InvoiceDao.class
 src/main/java/solid/model/Invoice.class
-src/main/java/solid/model/InvoiceDao.class
+src/main/java/solid/model/FileInvoiceDao.class
 src/main/java/solid/model/InvoiceCalculator.class
+src/main/java/solid/model/InvoicePrinter.class
+src/main/java/solid/model/InvoiceDao2.class
 Application.class
 src/main/java/solid/model/Marker.class
-src/main/java/solid/model/InvoicePrinter.class
+src/main/java/solid/model/DatabaseInvoiceDao.class
