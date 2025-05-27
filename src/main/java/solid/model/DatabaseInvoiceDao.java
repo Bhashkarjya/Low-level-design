@@ -1,7 +1,5 @@
 package src.main.java.solid.model;
 
-import src.main.java.solid.interfaces.InvoiceDao;
-
 //Extending the save method from the interface
 public class DatabaseInvoiceDao implements InvoiceDao {
 
