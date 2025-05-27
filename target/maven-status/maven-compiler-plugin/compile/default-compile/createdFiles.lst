@@ -1,0 +1,6 @@
+src/main/java/solid/model/Invoice.class
+src/main/java/solid/model/InvoiceDao.class
+src/main/java/solid/model/InvoiceCalculator.class
+Application.class
+src/main/java/solid/model/Marker.class
+src/main/java/solid/model/InvoicePrinter.class
