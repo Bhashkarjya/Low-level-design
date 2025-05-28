@@ -1,4 +1,6 @@
-
+/*
+ Behavioural Design Pattern : Strategy 
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -55,3 +57,11 @@ public class StrategyClient {
 
     }
 }
+
+/*
+Notes:
+1. Declare the Strategy interface common to all variants of the algoritm. (RouteStrategy)
+2. Create concrete classes which would implement the interface and each of these classes have its own algorithm
+3. In the context class (Navigator) add a reference for the strategy interface (RouteStrategy). The context class (Navigator)
+    should work only via the interface (RouteStrategy)
+*/
