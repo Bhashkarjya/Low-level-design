@@ -6,6 +6,7 @@ import src.main.java.designPatterns.abstractFactory.button.WindowsButton;
 import src.main.java.designPatterns.abstractFactory.checkbox.GUIFactory;
 import src.main.java.designPatterns.abstractFactory.checkbox.WindowsCheckbox;
 
+//Concrete factory classes
 public class WindowsFactory implements GUIFactory{
     @Override
     public Button createButton() {
