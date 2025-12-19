@@ -4,14 +4,17 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>solid-project</artifactId>
+  <groupId>com.lld</groupId>
+  <artifactId>low-level-design</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-  <build>
-    <sourceDirectory>.</sourceDirectory>
-    <outputDirectory>classes</outputDirectory>
-  </build>
+  <modules>
+    <module>concurrency</module>
+    <module>designPatterns</module>
+    <module>solid</module>
+    <module>systems</module>
+  </modules>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
