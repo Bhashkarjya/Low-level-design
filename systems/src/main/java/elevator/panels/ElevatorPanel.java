@@ -9,7 +9,8 @@ import elevator.button.EmergencyButton;
 
 public class ElevatorPanel {
     private List<ElevatorButton> floorButtons;
-    private DoorButton doorButton;
+    private DoorButton openButton;
+    private DoorButton closeButton;
     private EmergencyButton emergencyButton;
     //We will consider the floor numbers from 0 to floorCount
     public ElevatorPanel (int floorCount) {
@@ -17,7 +18,8 @@ public class ElevatorPanel {
         for( int i=0;i<=floorCount;i++) {
             this.floorButtons.add(new ElevatorButton(i));
         }
-        this.doorButton = new DoorButton();
+        this.openButton = new DoorButton();
+        this.closeButton = new DoorButton();
         this.emergencyButton = new EmergencyButton();
     }
 
@@ -25,9 +27,10 @@ public class ElevatorPanel {
         return this.floorButtons;
     }
 
-    public DoorButton getDoorButton() {
-        return this.doorButton;
+    public DoorButton getDoorCloseButton() {
+        return this.closeButton;
     }
+    public DoorButton getDoorOpenButton() { return this.openButton; }
 
     public EmergencyButton getEmergencyButton() {
         return this.emergencyButton;

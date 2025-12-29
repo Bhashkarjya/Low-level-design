@@ -1,4 +1,4 @@
-package elevator;
+package elevator.components;
 
 
 import java.util.ArrayList;

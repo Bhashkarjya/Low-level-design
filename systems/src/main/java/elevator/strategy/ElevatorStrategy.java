@@ -1,6 +1,6 @@
 package elevator.strategy;
 
-import elevator.ElevatorCar;
+import elevator.components.ElevatorCar;
 import elevator.enums.Direction;
 
 public interface ElevatorStrategy {
