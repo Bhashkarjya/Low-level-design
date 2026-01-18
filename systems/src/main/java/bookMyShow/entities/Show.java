@@ -10,6 +10,7 @@ public class Show {
     private final LocalDateTime startTime;
     private Map<Integer, Seat> seatBookings;
     private Screen screen;
+    private int availableSeats;
 
     public Show(Movie movie, LocalDateTime startTime, Screen screen) {
         this.movie = movie;
@@ -26,5 +27,10 @@ public class Show {
         for(int i=0;i<seats.size();i++) {
             this.seatBookings.put(i, seats.get(i));
         }
+    }
+
+    public int getAvailableSeats() { return this.availableSeats; }
+    public void decrementAvailableSeats(int seatCount) {
+        this.availableSeats -= seatCount;
     }
 }

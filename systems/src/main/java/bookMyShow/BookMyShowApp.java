@@ -80,6 +80,8 @@ public class BookMyShowApp {
         bookingService.bookSeats(show1, Arrays.asList(1,2,3));
         bookingService.bookSeats(show1, Arrays.asList(3,4));
 
+        bookingService.bookSeatsOCC(show2, Arrays.asList(5,7,9));
+
         List<Booking> bookingList = bookingService.getBookings();
         for(Booking b : bookingList) {
             b.displayBooking();

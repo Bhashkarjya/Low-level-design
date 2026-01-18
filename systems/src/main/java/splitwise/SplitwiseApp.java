@@ -7,7 +7,7 @@ import splitwise.groups.Group;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Demo {
+public class SplitwiseApp {
     public static void main(String[] args) {
         SplitwiseService splitwiseService = SplitwiseService.getInstance();
         //Create an user and a group

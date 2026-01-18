@@ -26,6 +26,8 @@ public class BookingService {
         }
         return instance;
     }
+
+    //Book seats using pessimistic locking
     public synchronized boolean bookSeats(Show show, List<Integer> seatIds){
         Map<Integer, Seat> seatMap = show.getSeatStatusMap();
         //Call the seatLockService to lock the seats
@@ -56,6 +58,29 @@ public class BookingService {
         }
 
         return true;
+    }
+
+    //Book seats using optimistic concurrency control using available seats as the version number
+    public boolean bookSeatsOCC(Show show, List<Integer> seatIds) {
+        //get the expected version
+        int expectedVersion = show.getAvailableSeats();
+        boolean payment = true;
+        if(!payment) {
+            return false;
+        }
+
+        //Commit with the version check
+        synchronized (show) {
+            if(show.getAvailableSeats() != expectedVersion) {
+                return false;
+                //Conflict detected in the version. Cancel the booking
+            }
+            for(int i=0;i<seatIds.size();i++) {
+                show.getSeatStatusMap().get(seatIds.get(i)).book();
+            }
+            show.decrementAvailableSeats(seatIds.size());
+            return true;
+        }
     }
 
     public List<Booking> getBookings() { return this.bookings; }
